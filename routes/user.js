@@ -37,8 +37,9 @@ exports.login = function(req, res){
         user.comparePassword(password, function(err, isMatch){
             if(isMatch && isMatch == true){
                 console.log('Login successfull');
-                req.session.userName = req.userName;
+                req.session.userName = user.userName;
                 req.session.loggedIn = true;
+                console.log('inside the compare password block -> ' +req.session.userName)
                 res.render('dashboard', {session: req.session});
             } else{
                 console.log('Login Failed');

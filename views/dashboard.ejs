@@ -2,10 +2,52 @@
     <head>
         <link rel="stylesheet" href="/css/bootstrap.min.css">    
     </head>
-    <body>
+    <body style="background-color: bisque">
         <% include partials/navbar.ejs %>
         <div class="container">
-            <h1><%= session.userName %>, you are now logged in. </h1>
+            <div class="col-md-2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1  align="center" class="margin-base-vertical">Topics</h1>
+                    </div>
+                    <div class="panel-body">
+                        <div id="topics" style="min-height: 400; max-height: 400; overflow-y: scroll; border-radius: 10px;">
+                            <ul>
+                                <li><a href="#">Family Holiday plan</a></li>
+                                <li><a href="#">Future financial plan</a></li>
+                            </ul>
+                        </div>                        
+                    </div>                    
+                </div>                
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1 align="center" class="margin-base-vertical">News Feed</h1>
+                    </div>
+                    <div class="panel-body">
+                        <div id="newsFeed"  style="min-height: 400; max-height: 400; overflow-y: scroll; border-radius: 10px;">
+
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1>Chat window</h1>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chatWindow" style="min-height: 400; max-height: 400; overflow-y: scroll; border-radius: 10px;">
+                            <ul>
+                                <li><a href="#">Aditya</a></li>
+                                <li><a href="#">Deepika</a></li>
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>
+                
+            </div>            
         </div>
         
     </body>
